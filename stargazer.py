@@ -3,8 +3,7 @@ from PIL import Image
 import google.generativeai as genai
 
 # ============ Gemini Setup ============
-genai.configure(api_key="AIzaSyAc6ctooYBucHy1dvONh6IPPRqBX4U4H68")
-# genai.configure(api_key="YOUR_GEMINI_API_KEY")
+genai.configure(api_key=st.secrets["API_KEY"])
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 # ============ Streamlit UI ============
